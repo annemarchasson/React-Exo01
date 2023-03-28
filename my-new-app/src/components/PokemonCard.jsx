@@ -1,32 +1,27 @@
-//variable array pokemon
-const pokemonList = [
-    {
-      name: "bulbasaur",
-      imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "mew",
-    },
-  ];
+// function creation card pokemon prend props enfant pokemon
+function PokemonCard (pokemon) {
 
-// function creation card pokemon
-function PokemonCard (){
-    
-//variable pokemon with first pokemonList
-const pokemon = pokemonList[1];
+    //console.log(pokemon.pokemon.imgSrc);
+    //console.log(pokemon.pokemon.name);
+    // on voit que si un seul pokemon, il ne descend pas jusqu'à imgSrc qui n'existe pas dans pokemon.  
+    //mais seulement dans pokemon.pokemo.
 
-console.log(pokemonList);
-return pokemon.imgSrc !== undefined ?
+//return condition
+return pokemon.pokemon.imgSrc !== undefined ?
+
+// si oui alors
 <figure>
-    <img src={pokemon.imgSrc} alt={pokemon.name} />
-    <figcaption>{pokemon.name}</figcaption>
+    <img src={pokemon.pokemon.imgSrc} alt={pokemon.pokemon.name} />
+    <figcaption>{pokemon.pokemon.name}</figcaption>
 </figure>
+//si non alors
 :
 <figure>
     <p>???</p>
-    <figcaption>{pokemon.name}</figcaption>
+    <figcaption>{pokemon.pokemon.name}</figcaption>
 </figure>
 }
+
 
 
 // export function PokemondCard pour app.jsx
