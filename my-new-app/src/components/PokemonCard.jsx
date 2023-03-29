@@ -27,7 +27,7 @@ return pokemon.pokemon.imgSrc !== undefined ?
 PokemonCard.propTypes = {
     pokemon: PropTypes.shape ({
         name:PropTypes.string.isRequired,
-        imgSrc: PropTypes.object,
+        imgSrc: PropTypes.string,
     }).isRequired,
 }
 /* // An object taking on a particular shape
