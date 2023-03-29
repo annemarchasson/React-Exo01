@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 // function creation card pokemon prend props enfant pokemon
 function PokemonCard (pokemon) {
 
@@ -22,7 +24,17 @@ return pokemon.pokemon.imgSrc !== undefined ?
 </figure>
 }
 
-
+PokemonCard.propTypes = {
+    pokemon: PropTypes.shape ({
+        name:PropTypes.string.isRequired,
+        imgSrc: PropTypes.object,
+    }).isRequired,
+}
+/* // An object taking on a particular shape
+  optionalObjectWithShape: PropTypes.shape({
+    optionalProperty: PropTypes.string,
+    requiredProperty: PropTypes.number.isRequired
+  }),*/
 
 // export function PokemondCard pour app.jsx
 export default PokemonCard;
