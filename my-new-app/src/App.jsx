@@ -1,7 +1,6 @@
 import  PokemonCard from "./components/PokemonCard";
+import  NavBar from "./components/NavBar";
 import { useState } from 'react';
-
-function App() {
 
 const pokemonList = [
   {
@@ -29,46 +28,15 @@ const pokemonList = [
     },
   ];
 
+function App() {
+
 const [index, setIndex] = useState(0);
-
-function handleNextClick() {
-  setIndex(index + 1);
-} 
-
-function handlePrevClick() {
-  setIndex(index - 1);
-}
-
-const pokemon = pokemonList[index];
 
   return (
     <div>
-      
-      {index <= 0 ? (
-          <display:none></display:none>
-        ) : (
-          <button onClick={handlePrevClick}>Previous</button>
-        )}
-
-
-      {index < pokemonList.length - 1 ? (
-          <button onClick={handleNextClick}>Next</button>
-        ) : (
-          <display:none></display:none>
-        )}
-      <PokemonCard pokemon= {pokemon}/>
+      <NavBar index={index} setIndex={setIndex} pokemonList={pokemonList} />
+      <PokemonCard pokemon= {pokemonList[index]}/>
     </div>
   );
 }
 export default App;
-
-
-/* autre idée:
-
-          <button disabled={
-          pokemonList[index] < pokemonList.length -1 ||
-          status === 'submitting'
-          }>
-          onClick={handlePrevClick}>Previous
-          </button>
-*/
