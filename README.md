@@ -1,6 +1,6 @@
-# React-Exo01
+# React-Exos
 
-React-Exo01 est un projet React qui propose une série d'exercices pour apprendre et pratiquer les concepts fondamentaux de React. Chaque exercice est conçu pour vous aider à acquérir une compréhension solide de React et à renforcer vos compétences en développement web.
+React-Exos est un projet React qui propose une série d'exercices pour apprendre et pratiquer les concepts fondamentaux de React. Chaque exercice est conçu pour vous aider à acquérir une compréhension solide de React et à renforcer vos compétences en développement web.
 
 Comment utiliser ce projet
 
